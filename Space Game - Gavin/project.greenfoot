@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.Alien.image=9.png
 class.Nighttime.image=Screen\ Shot\ 2019-04-02\ at\ 11.15.04\ AM.png
 editor.fx.0.height=722
 editor.fx.0.width=800
@@ -22,7 +23,7 @@ readme.x=10
 readme.y=10
 simulation.speed=50
 target1.height=50
-target1.name=Night
+target1.name=Alien
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
@@ -37,6 +38,6 @@ target2.x=0
 target2.y=0
 version=3.0.0
 width=1322
-world.lastInstantiated=Night
+world.lastInstantiated=Nighttime
 xPosition=59
 yPosition=162
