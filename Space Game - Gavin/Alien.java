@@ -8,9 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Alien extends Actor
 {
-    // instance variables
-    private int xPosition;
-    private int yPosition;   
+    // instance variables   
 
     /**
      * Act - do whatever the Alien wants to do. This method is called whenever
@@ -25,8 +23,6 @@ public class Alien extends Actor
 
     public void descend()
     {
-        xPosition = getX();
-        yPosition = getY();
 
         goDown();
 
@@ -35,10 +31,12 @@ public class Alien extends Actor
     public void goDown(){
         if ( isAtEdge() )
         {
+            //turn randomly when at an edge
             randomTurn();
 
         }
         else {
+            //move around the world
             move(3);
 
         }
@@ -48,9 +46,13 @@ public class Alien extends Actor
     {
         if (isAtEdge()) 
         {
+            //random turn when hitting the edge of the world
             turn(Greenfoot.getRandomNumber(180)-45);
+            //move 10 off of the edge of the world to avoid glitching and
+            //becoming stuck
             move(10);
         }
 
     }
+
 }
