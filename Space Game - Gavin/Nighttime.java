@@ -19,6 +19,10 @@ public class Nighttime extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(496, 298, 1); 
+        Alien alien = new Alien();
+        addObject(alien, 50, 50);
+        LazerGuy lazerguy = new LazerGuy();
+        addObject(lazerguy, 248,246 );
     }
     
     public void act()

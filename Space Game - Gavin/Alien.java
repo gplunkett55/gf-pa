@@ -17,7 +17,7 @@ public class Alien extends Actor
     public void act() 
     {
         descend();
-
+        checkForLazerGuy();
     }    
     //advance towards the bottom of the world. 
 
@@ -55,4 +55,13 @@ public class Alien extends Actor
 
     }
 
+    public void checkForLazerGuy()
+    {
+        if (isTouching(LazerGuy.class))
+        {
+            Greenfoot.stop();
+        }
+    }
 }
+
+    

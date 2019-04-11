@@ -31,19 +31,8 @@ public class LazerGuy extends Actor
         {
             move (5);
         }
-        
-            
-            
         }
-        public void checkForHit()
-        {
-            if (isTouching(LazerBeam.class))
-            {
-                
-                
-            }
-            
-        }
+       
     }
 
 
