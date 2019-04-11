@@ -27,6 +27,16 @@ public class Nighttime extends World
     
     public void act()
     {
+        
         frames += 1;
     }
+    public void shoot()
+    {   LazerBeam beam = new LazerBeam();
+        
+        
+        if (Greenfoot.isKeyDown("Space"))
+        {
+            addObject(beam, LazerBeam.xCor, LazerBeam.yCor);
+        }
+}
 }
