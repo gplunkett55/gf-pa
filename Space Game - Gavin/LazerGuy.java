@@ -8,17 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LazerGuy extends Actor
 {
+    int xCor;
+    int yCor;
     public int livesLeft = 0;
-    int xCor = getX(this);
-    int yCor = getY;
+
     /**
      * Act - do whatever the LazerGuy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Get an object reference to our world
-        Nighttime world = (Nighttime) getWorld();
 
         // Add your action code here.
         checkKeyPress();
@@ -34,13 +33,13 @@ public class LazerGuy extends Actor
         {
             move (5);
         }
+        if (Greenfoot.isKeyDown("space"))
+        {
+            LazerBeam newBeam = new LazerBeam();
+            getWorld().addObject(newBeam, getX(), getY());
+        }
     }
 
-    public void shoot()
-    {
-        
-        
-        
-    }
+    
 }
 

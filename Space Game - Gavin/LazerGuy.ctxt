@@ -6,6 +6,4 @@ comment1.target=void\ act()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ LazerGuy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ checkKeyPress()
-comment3.params=
-comment3.target=void\ shoot()
-numComments=4
+numComments=3

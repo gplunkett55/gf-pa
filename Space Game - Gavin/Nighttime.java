@@ -14,7 +14,7 @@ public class Nighttime extends World
      * Constructor for objects of class Nighttime.
      * 
      */
-    
+
     public Nighttime()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -24,19 +24,12 @@ public class Nighttime extends World
         LazerGuy lazerguy = new LazerGuy();
         addObject(lazerguy, 248,246 );
     }
-    
+
     public void act()
     {
-        
+
         frames += 1;
     }
-    public void shoot()
-    {   LazerBeam beam = new LazerBeam();
-        
-        
-        if (Greenfoot.isKeyDown("Space"))
-        {
-            addObject(beam, LazerBeam.xCor, LazerBeam.yCor);
-        }
-}
+
+   
 }
