@@ -30,6 +30,4 @@ public class Nighttime extends World
 
         frames += 1;
     }
-
-   
 }

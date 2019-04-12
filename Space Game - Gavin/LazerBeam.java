@@ -14,7 +14,7 @@ public class LazerBeam extends Actor
      */
     LazerBeam()
     {
-        turnTowards(0,0);
+        turnTowards(0, 0);
         move(5);
     }
 
@@ -25,6 +25,8 @@ public class LazerBeam extends Actor
     public void act() 
     {
         // Add your action code here
+        checkForAlien();
+        move();
     }    
 
     public void checkForAlien()
@@ -36,4 +38,14 @@ public class LazerBeam extends Actor
 
     }
 
+    public void move()
+    {
+        turnTowards(getX() , (getY() - 245));
+        move(5);
+        
+        if (isAtEdge())
+        {
+            getWorld().removeObject(this);
+        }
+    }
 }
