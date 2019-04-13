@@ -9,24 +9,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Alien extends Actor
 {
     // instance variables   
-
+    
     /**
      * Act - do whatever the Alien wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        descend();
+        goDown();
         checkForLazerGuy();
     }    
-    //advance towards the bottom of the world. 
-
-    public void descend()
-    {
-
-        goDown();
-
-    }
+    //advance towards the bottom of the world.
+    
 
     public void goDown(){
         if ( isAtEdge() )
@@ -59,6 +53,7 @@ public class Alien extends Actor
     {
         if (isTouching(LazerGuy.class))
         {
+            //ends game if comes in contact with the LazerGuy
             Greenfoot.stop();
         }
     }

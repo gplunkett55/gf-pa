@@ -10,7 +10,11 @@ public class LazerGuy extends Actor
 {
     int xCor;
     int yCor;
-    public int livesLeft = 0;
+    
+
+    /**
+     * Constructor
+     */
 
     /**
      * Act - do whatever the LazerGuy wants to do. This method is called whenever
@@ -21,6 +25,7 @@ public class LazerGuy extends Actor
 
         // Add your action code here.
         checkKeyPress();
+        
     }    
 
     public void checkKeyPress()
@@ -40,6 +45,4 @@ public class LazerGuy extends Actor
         }
     }
 
-    
 }
-
