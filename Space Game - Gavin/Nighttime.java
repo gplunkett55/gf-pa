@@ -10,6 +10,7 @@ public class Nighttime extends World
 {
     int score = 0;
     int frames = 0;
+
     /**
      * Constructor for objects of class Nighttime.
      * 
@@ -24,19 +25,35 @@ public class Nighttime extends World
         addObject(alien, 50, 50);
         LazerGuy lazerguy = new LazerGuy();
         addObject(lazerguy, 248,246 );
-        
-        // Set the initial time
-        String initialTime = "Time: 0";
-        showText(initialTime, 100, 50);
 
-         // Set the initial score
-        String currentScore = "Score: 0";
-        showText(currentScore, 500, 50);
+        // Set the initial time
+        String initialTime = "Time: ";
+        showText(initialTime, 75, 25);
     }
 
     public void act()
     {
 
         frames += 1;
+
+        //Update the time every 60 frames
+        if ((frames % 60) == 0)
+        {
+            String timeElapsed = "Time: " + Integer.toString(frames / 60);
+            showText(timeElapsed, 75, 25);
+        }
+        endTheGame();
     }
+    public void endTheGame()
+    {
+        if ((frames % 3600) == 0)
+        {
+            Greenfoot.stop();
+
+            // Show a game over message
+            String endOfGameMessage = "Game Over";
+            showText(endOfGameMessage, 248, 123);
+        }
+    }
+
 }

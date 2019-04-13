@@ -34,6 +34,7 @@ public class LazerBeam extends Actor
         if(isTouching(Alien.class))
         {
             removeTouching(Alien.class);
+            
         }
 
     }
