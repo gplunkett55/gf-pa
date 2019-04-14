@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Nighttime here.
  * 
  * @author (your name) 
- * @version (a version number or a date)
+ * @version (a version number or an  date)
  */
 public class Nighttime extends World
 {
@@ -21,6 +21,7 @@ public class Nighttime extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(496, 298, 1); 
         //Load the aliens and LazerGuy into the world
+        Nighttime nighttime = new Nighttime();
         Alien alien = new Alien();
         addObject(alien, 50, 50);
         LazerGuy lazerguy = new LazerGuy();
