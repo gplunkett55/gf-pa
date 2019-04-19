@@ -18,6 +18,8 @@ public class Alien extends Actor
     {
         goDown();
         checkForLazerGuy();
+        
+        
     }    
     //advance towards the bottom of the world.
     
@@ -31,7 +33,7 @@ public class Alien extends Actor
         }
         else {
             //move around the world
-            move(3);
+            move(7);
 
         }
     }
@@ -55,8 +57,13 @@ public class Alien extends Actor
         {
             //ends game if comes in contact with the LazerGuy
             Greenfoot.stop();
+            
+            String endOfGameMessage = "You Lose!";
+            getWorld().showText(endOfGameMessage, 248, 123);
         }
     }
+    
+    
 }
 
     

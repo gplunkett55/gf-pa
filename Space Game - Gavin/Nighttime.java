@@ -10,7 +10,7 @@ public class Nighttime extends World
 {
     int score = 0;
     int frames = 0;
-
+    int addAlien = 0;
     /**
      * Constructor for objects of class Nighttime.
      * 
@@ -23,9 +23,11 @@ public class Nighttime extends World
         //Load the aliens and LazerGuy into the world
         Alien alien = new Alien();
         addObject(alien, 50, 50);
+        addObject(alien, 51, 50);
+        addObject(alien, 52, 50); 
         LazerGuy lazerguy = new LazerGuy();
         addObject(lazerguy, 248,246 );
-
+        
         // Set the initial time
         String initialTime = "Time: ";
         showText(initialTime, 75, 25);
@@ -33,7 +35,7 @@ public class Nighttime extends World
 
     public void act()
     {
-
+        
         frames += 1;
 
         //Update the time every 60 frames
@@ -54,6 +56,10 @@ public class Nighttime extends World
             String endOfGameMessage = "Game Over";
             showText(endOfGameMessage, 248, 123);
         }
+        
     }
-
+    
+    
+        
+        
 }

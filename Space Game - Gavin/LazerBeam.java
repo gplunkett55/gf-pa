@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LazerBeam extends Actor
 {
+    int aliens = 1;
     /**
      * Constructor
      * Happens once when LazerBeam object is created
@@ -17,7 +18,9 @@ public class LazerBeam extends Actor
         turnTowards(0, 0);
         move(5);
     }
-
+    
+    
+    
     /**
      * Act - do whatever the LazerBeam wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,17 +30,10 @@ public class LazerBeam extends Actor
         // Add your action code here
         checkForAlien();
         move();
+        
     }    
 
-    public void checkForAlien()
-    {
-        if(isTouching(Alien.class))
-        {
-            removeTouching(Alien.class);
-            
-        }
-
-    }
+    
 
     public void move()
     {
@@ -47,6 +43,24 @@ public class LazerBeam extends Actor
         if (isAtEdge())
         {
             getWorld().removeObject(this);
+        }
+    }
+    public void checkForAlien()
+    {
+        if(isTouching(Alien.class))
+       {
+           removeTouching(Alien.class);
+           aliens =- 1;
+       }
+       
+    }
+    public void checkWinGame()
+    {
+        if (aliens == 0)
+        {
+            Greenfoot.stop();
+            String endOfGameMessage = "You Win!";
+            getWorld().showText(endOfGameMessage, 248, 123);
         }
     }
 }
